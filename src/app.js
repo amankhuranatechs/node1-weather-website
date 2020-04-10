@@ -30,7 +30,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Andrew Mead',
+        name: 'Aman khurana',
         footer: 'This is footer page in about'
     })
 })
