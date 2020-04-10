@@ -15,7 +15,7 @@ fetch('http://puzzle.mead.io/puzzle').then((response)=>{
 function getWeather(location) {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent  = '';
-    fetch('http://localhost:3000/weather?address='+(location) ).then((response)=>{
+    fetch('/weather?address='+(location) ).then((response)=>{
         console.log(response)
     if(response.error) {
         messageOne.textContent = response.error;
