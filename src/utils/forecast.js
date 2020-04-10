@@ -8,7 +8,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if(body.error) {
             callback('Unable to whether forecast. Try another service', undefined);
         } else {
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' out. There is a ' + body.currently.precipProbability + '% chance of rain today.')
+            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' out. There is a ' + body.currently.precipProbability + '% chance of rain today.' + 'The high temperature is ' +  body.daily.data[0].temperatureHigh + '. The daily low temperature is '+ body.daily.data[0].temperatureLow)  
         }
     })
 }
